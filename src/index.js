@@ -4,10 +4,19 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-function Welcome(props) {
+class Welcome extends React.Component {
+	render() {
+		console.log(this.props);
+		return (
+			<h1>Hello, {this.props.name} {this.props.lastName}</h1>
+		);
+	}
+}
+
+/* function Welcome(props) {
 	console.log(props);
 	return <h1>Hello, {props.name} {props.lastName}</h1>;
-}
+} */
 
 const element = <Welcome lastName="Nickolson" name="Sara" />;
 
